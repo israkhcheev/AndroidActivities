@@ -24,6 +24,9 @@ class ActivityC : AppCompatActivity() {
             finish()
         }
 
+        findViewById<Button>(R.id.close_stack).setOnClickListener {
+            finishAffinity()
+        }
     }
 
     override fun onStart() {
