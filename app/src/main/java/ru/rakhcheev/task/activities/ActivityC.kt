@@ -20,6 +20,10 @@ class ActivityC : AppCompatActivity() {
             startActivity(Intent(this, ActivityD::class.java).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK))
         }
 
+        findViewById<Button>(R.id.close_c_btn).setOnClickListener {
+            finish()
+        }
+
     }
 
     override fun onStart() {
