@@ -20,5 +20,17 @@ class SenderActivity : AppCompatActivity() {
             )
             startActivity(intent)
         }
+
+        findViewById<Button>(R.id.send_mail_btn).setOnClickListener {
+            val intent = Intent(Intent.ACTION_SEND)
+                .setType("message/rfc822")
+                .putExtra(Intent.EXTRA_EMAIL, arrayOf("android@otus.ru", "i.s.rakhcheev@gmail.com"))
+                .putExtra(Intent.EXTRA_SUBJECT, "Greeting")
+                .putExtra(
+                    Intent.EXTRA_TEXT,
+                    "Hello everyone here, I'm trying to send you an email from my Android app"
+                )
+            startActivity(Intent.createChooser(intent, "Send email using..."))
+        }
     }
 }
