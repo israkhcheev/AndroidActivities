@@ -7,7 +7,7 @@ android {
     compileSdk 32
 
     defaultConfig {
-        applicationId "otus.gpb.homework.activities"
+        applicationId "ru.rakhcheev.task.activities"
         minSdk 23
         targetSdk 32
         versionCode 1
