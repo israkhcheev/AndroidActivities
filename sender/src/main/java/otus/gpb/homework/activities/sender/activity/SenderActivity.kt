@@ -12,5 +12,13 @@ class SenderActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.sender_activity_layout)
+
+        findViewById<Button>(R.id.google_map_btn).setOnClickListener {
+            val intent = Intent(
+                Intent.ACTION_VIEW,
+                Uri.parse("https://www.google.ru/maps/search/Рестораны/")
+            )
+            startActivity(intent)
+        }
     }
 }
