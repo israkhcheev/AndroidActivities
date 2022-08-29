@@ -32,5 +32,21 @@ class SenderActivity : AppCompatActivity() {
                 )
             startActivity(Intent.createChooser(intent, "Send email using..."))
         }
+
+        findViewById<Button>(R.id.receiver_btn).setOnClickListener {
+            val intent = Intent(Intent.ACTION_SEND)
+                .addCategory(Intent.CATEGORY_DEFAULT)
+                .setType("text/plain")
+            generatePayload(intent)
+            startActivity(intent)
+        }
+    }
+
+
+    private fun generatePayload(intent: Intent) {
+        intent
+            .putExtra("title", "Dune: Part One")
+            .putExtra("year","2021")
+            .putExtra("description","Фильм, основанный на одноимённом фантастическом романе Френка Герберта, расскажет историю Пола Атрейдеса — талантливого молодого человека, рождённого в состоятельной семье. Ему суждено великое будущее, которое он пока не в силах осознать. Однажды его семейство отправляют на далёкую и опасную планету Арракис, где среди бесконечных песчаных дюн добывают специю — психоделическое вещество, необходимое для межгалактических путешествий. Добыче мешают жуткие существа — огромные песчаные черви, реагирующие на звук и пожирающие всё на своём пути. Пока Атрейдесы осваиваются на планете, они не догадываются, что их отправили на верную смерть...")
     }
 }
