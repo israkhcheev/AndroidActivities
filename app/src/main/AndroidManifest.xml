@@ -27,17 +27,17 @@
         <activity
             android:name=".ActivityB"
             android:label="@string/label_activity_b"
-            android:taskAffinity=".ActivityB" />
+            android:taskAffinity=".tasks.second" />
 
         <activity
             android:name=".ActivityC"
             android:label="@string/label_activity_c"
-            android:taskAffinity=".ActivityB" />
+            android:taskAffinity=".tasks.second" />
 
         <activity
             android:name=".ActivityD"
             android:label="@string/label_activity_d"
-            android:taskAffinity=".ActivityB" />
+            android:taskAffinity=".tasks.second" />
     </application>
 
 </manifest>
